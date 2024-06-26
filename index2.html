@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .dot{
+            background-color: blue;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin: 5px;
+            animation-name: wave;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        .dot:nth-child(1){
+            animation-delay: -0.25s;
+        }
+        .dot:nth-child(2){
+            animation-delay: -0.5s;
+            background-color: black;
+        }
+        .dot:nth-child(3){
+            animation-delay: -0.75s;
+            background-color: brown;
+        }
+        .dot:nth-child(4){
+            animation-delay: -1s;
+            background-color: rgb(251, 0, 255);
+        }
+        .dot:nth-child(5){
+            animation-delay: -1.25s;
+            background-color: rgb(79, 217, 16);
+        }
+
+        @keyframes wave{
+            0%{
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+</body>
+</html>
